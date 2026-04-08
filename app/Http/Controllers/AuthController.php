@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Redirect;
 class AuthController extends Controller
 {
     public function showLoginForm(){
-        return view('login'); // Pastikan buat file login.blade.php nanti
+        return view('login');  // Pastikan buat file login.blade.php nanti 
     }
 
     public function login(Request $request){
@@ -19,7 +19,7 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
         
-        // 1. Cek Login Siswa (Input username dianggap NIS)
+        //1. Cek Login Siswa (Input username dianggap NIS)
         if (Auth::guard('siswa')->attempt(['nis' => $request-> username, 'password' => $request->password])) {
             return redirect ('/siswa/dashboard');
         }

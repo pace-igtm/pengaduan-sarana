@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Login - Pengaduan Sekolah</title> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
+rel="stylesheet">   
 </head> 
 <body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;"> 
  
@@ -20,8 +20,7 @@ rel="stylesheet">
             @csrf 
             <div class="mb-3"> 
                 <label class="form-label">Username / NIS</label> 
-                <input type="text" name="username" class="form-control" placeholder="Masukkan Username 
-Admin atau NIS Siswa" required> 
+                <input type="text" name="username" class="form-control" placeholder="Masukkan Username Admin atau NIS Siswa" required> 
             </div> 
             <div class="mb-3"> 
                 <label class="form-label">Password</label> 

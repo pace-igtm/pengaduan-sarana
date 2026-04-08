@@ -17,14 +17,12 @@ rel="stylesheet">
         <div class="container"> 
             <a class="navbar-brand" href="#">Pengaduan Sekolah</a> 
             @auth('siswa') 
-                <span class="navbar-text text-white">Halo, Siswa ({{ Auth::guard('siswa')->user()->nis 
-}})</span> 
+                <span class="navbar-text text-white">Halo, Siswa ({{ Auth::guard('siswa')->user()->nis }})</span> 
                 <a href="{{ route('logout') }}" class="btn btn-sm btn-danger ms-3">Logout</a> 
             @endauth 
             @auth('admin') 
  
-                <span class="navbar-text text-white">Halo, Admin ({{ Auth::guard('admin')->user()
->username }})</span> 
+                <span class="navbar-text text-white">Halo, Admin ({{ Auth::guard('admin')->user()>username }})</span> 
                 <a href="{{ route('logout') }}" class="btn btn-sm btn-danger ms-3">Logout</a> 
             @endauth 
         </div> 

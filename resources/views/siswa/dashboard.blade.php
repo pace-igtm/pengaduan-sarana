@@ -6,7 +6,7 @@
         <div class="card p-3 mb-4"> 
             <h5 class="card-title">Buat Laporan Baru</h5> 
             <hr> 
-            <form action="{{ route('siswa.store') }}" method="POST"> 
+            <form action="{{ route('siswa.dashboard') }}" method="POST"> 
                 @csrf 
                 <div class="mb-3"> 
                     <label>Kategori</label> 

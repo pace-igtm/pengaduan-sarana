@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\InputAspirasi;
 use App\Models\Aspirasi;
 use App\Models\Kategori;
@@ -9,6 +10,9 @@ use App\Models\Kategori;
 class AdminController extends Controller
 {
     public function index(Request $request){
+
+        $admin = Auth::guard('admin')->user();
+
         // Query Dasar dengan Realasi
         $query = InputAspirasi::with('siswa', 'kategori', 'aspirasi');
 
